@@ -16,7 +16,7 @@ class State(pc.State):
 def index():
     return pc.center(
         pc.vstack(
-            pc.heading("Welcome to Pynecone x Railway!", font_size="2em", font_family="Unbounded"),
+            pc.heading("Welcome to Pynecone!", font_size="2em"),
             pc.box("Get started by editing ", pc.code(filename, font_size="1em")),
             pc.link(
                 "Check out our docs!",
@@ -36,8 +36,6 @@ def index():
 
 
 # Add state and page to the app.
-app = pc.App(state=State, stylesheets=[
-        "https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap",
-    ])
+app = pc.App(state=State)
 app.add_page(index)
 app.compile()
